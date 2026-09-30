@@ -69,3 +69,24 @@ QA issues will be tracked with:
 Initial Arduino traffic light implementation completed.
 
 QA testing and issue tracking are in progress.
+
+## QA Testing
+
+The system was reviewed using the following test cases:
+
+| Test Case | Expected Result | Status |
+|---|---|---|
+| Red LED test | Red LED turns ON during STOP state | Passed |
+| Yellow LED test | Yellow LED turns ON during WAIT state | Passed |
+| Green LED test | Green LED turns ON during GO state | Passed |
+| LED state test | Only one LED is ON at a time | Passed |
+| Timing test | Red, Yellow and Green timings follow configured values | Passed |
+
+## QA Issue Resolution
+
+| Issue | Problem | Resolution | Status |
+|---|---|---|---|
+| QA-01 | Hard-coded timing values | Added timing constants | Resolved |
+| QA-02 | Pin configuration documentation | Added clear pin mapping | Resolved |
+| QA-03 | Multiple LED state verification | Explicitly controlled all LED states | Resolved |
+| QA-04 | Code readability | Added descriptive timing constants | Resolved |
