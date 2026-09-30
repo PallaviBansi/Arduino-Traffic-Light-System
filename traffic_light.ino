@@ -7,6 +7,11 @@ const int RED_LED = 8;
 const int YELLOW_LED = 9;
 const int GREEN_LED = 10;
 
+// Traffic light timing values in milliseconds
+const int RED_TIME = 5000;
+const int YELLOW_TIME = 2000;
+const int GREEN_TIME = 5000;
+
 void setup() {
   pinMode(RED_LED, OUTPUT);
   pinMode(YELLOW_LED, OUTPUT);
@@ -19,17 +24,17 @@ void loop() {
   digitalWrite(RED_LED, HIGH);
   digitalWrite(YELLOW_LED, LOW);
   digitalWrite(GREEN_LED, LOW);
-  delay(5000);
+  delay(RED_TIME);
 
   // YELLOW - WAIT
   digitalWrite(RED_LED, LOW);
   digitalWrite(YELLOW_LED, HIGH);
   digitalWrite(GREEN_LED, LOW);
-  delay(2000);
+  delay(YELLOW_TIME);
 
   // GREEN - GO
   digitalWrite(RED_LED, LOW);
   digitalWrite(YELLOW_LED, LOW);
   digitalWrite(GREEN_LED, HIGH);
-  delay(5000);
+  delay(GREEN_TIME);
 }
